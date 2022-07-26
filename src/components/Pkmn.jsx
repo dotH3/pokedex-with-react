@@ -11,7 +11,8 @@ const Pkmn = ({PkmnID='ditto'}) => {
         axios.get(url+PkmnID).then((el)=>{
             setPkmnInfo({
                 id: el.data.id,
-                name: el.data.name.toUpperCase()
+                name: el.data.name.toUpperCase(),
+                img: el.data.sprites.front_default
             })
         })
         console.log(pkmnInfo)
@@ -20,7 +21,11 @@ const Pkmn = ({PkmnID='ditto'}) => {
     return (
         <tr>
             <td>{pkmnInfo.id}</td>
-            <td></td>
+            <td>
+                <div className="bg-warning d-flex rounded-circle" style={{'width':'75px', 'height':'75px'}}>
+                    <img src={pkmnInfo.img} alt="" />
+                </div>
+            </td>
             <td>{pkmnInfo.name}</td>
             <td></td>
             <td></td>
