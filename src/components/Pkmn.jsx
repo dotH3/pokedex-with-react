@@ -18,7 +18,7 @@ const Pkmn = ({PkmnID='1'}) => {
             var types = [firstType];
             
             if(el.data.types.length==2){types.push(el.data.types[1].type.name)}
-            types.push(color)
+            types.push({color})
 
             setPkmnInfo({
                 id: el.data.id,
@@ -31,14 +31,14 @@ const Pkmn = ({PkmnID='1'}) => {
     }
 
     useEffect(()=>{
-        console.log(pkmnInfo.types.color)
+        console.log(pkmnInfo)
     })
 
     return (
         <tr>
             <td>{pkmnInfo.id}</td>
             <td>
-                <div className="d-flex rounded-circle" style={{'width':'75px', 'height':'75px'}}>
+                <div className="d-flex rounded-circle" style={{'width':'75px', 'height':'75px', 'backgroundColor': pkmnInfo.types}}>
                     <img src={pkmnInfo.img} alt="" />
                 </div>
             </td>
