@@ -9,6 +9,7 @@ const Header = ({logged}) => {
             list-unstyled
             */}
           <h3>Pokedex</h3>
+          {/* https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg */}
         </div>
     </>
   )
