@@ -4,12 +4,11 @@ import React from 'react'
 const Header = ({logged}) => {
   return (
     <>
-        <div className='text-center p-1' style={{backgroundColor: '#343A40', color: 'white'}} >
-            {/* 
-            list-unstyled
-            */}
-          <h3>Pokedex</h3>
-          {/* https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg */}
+        <div className='text-center sticky-top' style={{backgroundColor: '#343A40', color: 'white'}} >
+          <h3>
+            {/* <span>Gengar Browser</span> */}
+            <img style={{'height':'50px'}} src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"/>
+          </h3>
         </div>
     </>
   )
