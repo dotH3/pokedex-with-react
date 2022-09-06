@@ -31,7 +31,7 @@ const Pkmn = ({PkmnID='1'}) => {
                 })
             })
         }
-    });
+    },[]);
     
     return (
         <tr>

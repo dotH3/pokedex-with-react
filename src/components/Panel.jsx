@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Pkmn from './Pkmn'
 
 const Panel = () => {
+    const lista = [1,2,3,4,5,6,7,8,9,10]
   return (
     <>
         <div className="m-3 border">
@@ -17,10 +18,14 @@ const Panel = () => {
                 </thead>
                 <tbody id="pokeList">
                     
-                    <Pkmn PkmnID='3'/>
-                    <Pkmn PkmnID='6'/>
-                    <Pkmn PkmnID='9'/>
-                    
+                    {/* <Pkmn PkmnID='3'/> */}
+                    {lista.map((e)=>{
+                        return(
+                            <Pkmn PkmnID={e}/> 
+                        )
+                    })}
+
+
                 </tbody>
             </table>
         </div>
